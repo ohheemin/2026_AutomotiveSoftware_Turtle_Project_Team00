@@ -5,7 +5,9 @@ MovingTurtle::MovingTurtle(const std::string& node_name, const double& loop_rate
     : Node(node_name)  {
     
     // -------------------TODO - define a publisher for the turtle velocity command--------------------
-    // ~~~
+    // command velocity를 turtlesim에 부여해야 함. 
+    // 이게 첫 번째 노드임
+    // 오희민 개발
     // -------------------------------------------------------------------------------
 
     t_run_node_ = this->create_wall_timer(
