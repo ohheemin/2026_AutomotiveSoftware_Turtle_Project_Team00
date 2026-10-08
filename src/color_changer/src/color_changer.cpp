@@ -9,6 +9,7 @@ ColorChanger::ColorChanger(const std::string& node_name, const double& loop_rate
     // -------------------TODO - define publisher and subscriber--------------------
     // color changer에 관련된 내용. 
     // 정동명 개발
+    // test commit
     // -------------------------------------------------------------------------------
 
     // parameter client to change the background color parameters of the turtlesim node
