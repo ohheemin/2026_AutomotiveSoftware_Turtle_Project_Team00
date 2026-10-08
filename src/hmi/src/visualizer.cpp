@@ -8,7 +8,7 @@ Visualizer::Visualizer(const std::string& node_name, const double& loop_rate)
 
     // -------------------TODO - define publisher and subscriber--------------------
     // 비주얼라이저 코드
-    // 정동명 개발
+    // 오희민 개발
     // -------------------------------------------------------------------------------
 
     t_run_node_ = this->create_wall_timer(
