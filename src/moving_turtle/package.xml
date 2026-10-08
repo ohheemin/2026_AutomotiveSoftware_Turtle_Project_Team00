@@ -11,7 +11,7 @@
 
   <depend>rclcpp</depend>
   <!-- ===================TODO - add other dependencies==================== -->
-  <!-- ~~~ -->
+
   <!-- =============================================================================== -->
 
   <test_depend>ament_lint_auto</test_depend>
