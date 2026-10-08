@@ -13,6 +13,11 @@ A simple ROS2 Humble project built on Turtlesim. It does three things:
 | Heemin Oh | Leader | `moving_turtle` node, `hmi` node |
 | Dongmyeong Jeong | Member | `color_changer` node |
 
+## System Architecture
+
+<img width="749" height="372" alt="스크린샷 2026-10-08 13-04-16" src="https://github.com/user-attachments/assets/4ca9ddb0-d30b-4295-9d06-372cd4e9cc31" />
+
+
 ## Nodes
 
 ### `moving_turtle` (Heemin Oh)
