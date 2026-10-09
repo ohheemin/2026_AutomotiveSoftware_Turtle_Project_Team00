@@ -8,6 +8,7 @@ MovingTurtle::MovingTurtle(const std::string& node_name, const double& loop_rate
     // command velocity를 turtlesim에 부여해야 함. 
     // 이게 첫 번째 노드임
     // 오희민 개발
+    p_turtle_cmd_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
     // -------------------------------------------------------------------------------
 
     t_run_node_ = this->create_wall_timer(
@@ -23,7 +24,8 @@ void MovingTurtle::Run(const rclcpp::Time &current_time) {
     double yawrate;
 
     // -------------------TODO - implement the algorithm to move the turtle--------------------
-    // ~~~
+    if (loop_count_ % 200 < 100) { vx = 2.0; yawrate = 0.0; }
+    else                         { vx = 0.0; yawrate = 1.0; }
     // -------------------------------------------------------------------------------
 
     loop_count_ += 1;

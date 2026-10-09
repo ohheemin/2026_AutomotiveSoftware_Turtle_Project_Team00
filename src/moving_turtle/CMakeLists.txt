@@ -20,7 +20,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 # -------------------TODO - find other dependencies--------------------
-
+find_package(geometry_msgs REQUIRED)
 # -------------------------------------------------------------------------------
 
 include_directories(
@@ -28,15 +28,15 @@ include_directories(
 )
 
 # -------------------TODO - add executable moving_turtle.cpp--------------------
-
+add_executable(${PROJECT_NAME} src/moving_turtle.cpp)
 # -------------------------------------------------------------------------------
 
 # -------------------TODO - add dependencies to the executable--------------------
-# ~~~
+ament_target_dependencies(${PROJECT_NAME} rclcpp geometry_msgs)
 # -------------------------------------------------------------------------------
 
 # -------------------TODO - install the executable--------------------
-
+install(TARGETS ${PROJECT_NAME} DESTINATION lib/${PROJECT_NAME})
 # -------------------------------------------------------------------------------
 
 ament_package()
