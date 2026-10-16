@@ -86,6 +86,8 @@ ros2 topic echo <marker_topic>
 ├── launch/
 │   ├── simple_project.xml    # Launches all nodes at once (Dongmyeong Jeong)
 │   └── simple_project.rviz   # RViz config: map frame + turtle marker
+├── docs/
+│   └── rqt_graph.png         # Node graph of the launched system
 └── src/
     ├── my_msgs/              # TurtleColor.msg
     ├── moving_turtle/        # Heemin Oh
