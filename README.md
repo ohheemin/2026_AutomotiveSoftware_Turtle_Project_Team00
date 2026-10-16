@@ -6,8 +6,7 @@ A simple ROS2 Humble project built on Turtlesim. It does three things:
 - Changes the background color based on the turtle's heading.
 - Visualizes the turtle's position and color as an RViz Marker.
 
-[스크린캐스트 10-16-2026 05:45:53 PM.webm](https://github.com/user-attachments/assets/2e30e4b4-e17f-443b-b17a-a45b7af526e6)
-
+[turtle_project.webm](https://github.com/user-attachments/assets/a77680c3-8533-466c-96dc-bc2c45002532)
 
 ## Team
 
