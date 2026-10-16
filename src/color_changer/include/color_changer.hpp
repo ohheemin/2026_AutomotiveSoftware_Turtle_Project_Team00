@@ -13,7 +13,8 @@
 #include "rclcpp/rclcpp.hpp"
 
 // -------------------TODO - include the message header files used in this node--------------------
-// ~~~
+#include "my_msgs/msg/turtle_color.hpp"
+#include "turtlesim/msg/pose.hpp"
 // -------------------------------------------------------------------------------
 
 
@@ -33,12 +34,12 @@ class ColorChanger : public rclcpp::Node   {
         
         // Publisher 
         // -------------------TODO - declare a publisher for the turtle color--------------------
-        // ~~~
+        rclcpp::Publisher<my_msgs::msg::TurtleColor>::SharedPtr p_turtle_color_;
         // -------------------------------------------------------------------------------
 
         // Subscriber
         // -------------------TODO - declare a subscriber for the turtle pose--------------------
-        // ~~~
+        rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr s_turtle_pose_;
         // -------------------------------------------------------------------------------
 
         // Timer
