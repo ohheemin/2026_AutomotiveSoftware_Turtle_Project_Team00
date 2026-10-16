@@ -65,7 +65,7 @@ colcon build
 source install/setup.bash
 
 # Launch turtlesim, all three nodes, and rviz2 at once (XML launch)
-ros2 launch launch/simple_project.xml
+ros2 launch <launch_package> <launch_file>.launch.xml
 ```
 
 Check node connections with `rqt_graph`, and message contents with `ros2 topic echo`.
@@ -73,18 +73,26 @@ Check node connections with `rqt_graph`, and message contents with `ros2 topic e
 ```bash
 rqt_graph
 ros2 topic echo /turtle1/cmd_vel
-ros2 topic echo /hmi/turtle_marker
+ros2 topic echo <marker_topic>
 ```
+## Node Graph (rqt_graph)
+
+<img width="700" alt="rqt_graph of the launched system" src="docs/rqt_graph.png" />
 
 ## Directory Structure
 
 ```
-src/
-├── my_msgs/        # TurtleColor.msg
-├── moving_turtle/        # Heemin Oh
-├── color_changer/        # Dongmyeong Jeong
-├── hmi/                  # Heemin Oh
-└── launch/ (simple_project.xml, simple_project.rviz)    # launch.xml, rviz config
+.
+├── launch/
+│   ├── simple_project.xml    # Launches all nodes at once (Dongmyeong Jeong)
+│   └── simple_project.rviz   # RViz config: map frame + turtle marker
+├── docs/
+│   └── rqt_graph.png         # Node graph of the launched system
+└── src/
+    ├── my_msgs/              # TurtleColor.msg
+    ├── moving_turtle/        # Heemin Oh
+    ├── color_changer/        # Dongmyeong Jeong
+    └── hmi/                  # Heemin Oh
 ```
 
 > `build/`, `install/`, and `log/` are excluded via `.gitignore`.
