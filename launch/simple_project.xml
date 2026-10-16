@@ -2,6 +2,10 @@
 
 <launch>
     <!-- ===================TODO - add the nodes to be launched==================== -->
-    <!-- ~~~ -->
+    <node pkg="turtlesim" exec="turtlesim_node" output="screen"/>
+    <node pkg="color_changer" exec="color_changer" output="screen"/>
+    <node pkg="moving_turtle" exec="moving_turtle" output="screen"/>
+    <node pkg="hmi" exec="hmi" output="screen"/>
+    <node pkg="rviz2" exec="rviz2" args="-d $(dirname)/simple_project.rviz" output="screen"/>
     <!-- =============================================================================== -->
 </launch>
