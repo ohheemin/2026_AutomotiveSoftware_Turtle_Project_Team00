@@ -17,11 +17,13 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
+# find dependencies 
+# REQUIRED가 있으면 -> 해당 패키지 없으면 오류 발생
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 # -------------------TODO - find other dependencies--------------------
-# ~~~
+find_package(turtlesim REQUIRED)
+find_package(my_msgs REQUIRED)
 # -------------------------------------------------------------------------------
 
 include_directories(
@@ -29,11 +31,11 @@ include_directories(
 )
 
 # -------------------TODO - add executable color_changer.cpp--------------------
-# ~~~
+add_executable(${PROJECT_NAME} src/color_changer.cpp)
 # -------------------------------------------------------------------------------
 
 # -------------------TODO - add executable change_color_oneshot.cpp--------------------
-# ~~~
+add_executable(change_color_oneshot src/change_color_oneshot.cpp)
 # -------------------------------------------------------------------------------
 
 
@@ -41,16 +43,18 @@ include_directories(
 ament_target_dependencies(${PROJECT_NAME}
   rclcpp
   # -------------------TODO - add other dependencies--------------------
-  # ~~~
+  turtlesim
+  my_msgs
   # -------------------------------------------------------------------------------
 )
 
 # -------------------TODO - add dependencies to the change_color_oneshot executable--------------------
-# ~~~
+ament_target_dependencies(change_color_oneshot rclcpp)
 # -------------------------------------------------------------------------------
 
 # -------------------TODO - install the executables--------------------
-# ~~~
+install(TARGETS ${PROJECT_NAME} 
+  change_color_oneshot DESTINATION lib/${PROJECT_NAME})
 # -------------------------------------------------------------------------------
 
 ament_package()
